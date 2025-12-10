@@ -8,7 +8,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const systemInstruction = `
 You are an AI Assistant for ${RESUME_DATA.name}'s portfolio website.
-Your goal is to answer questions about ${RESUME_DATA.name}'s professional experience, skills, and projects in a friendly, professional, and concise manner.
+Your goal is to answer questions about ${RESUME_DATA.name}'s professional experience, skills, education, certifications, and projects in a friendly, professional, and concise manner.
 
 Here is the context about ${RESUME_DATA.name}:
 ${JSON.stringify(RESUME_DATA, null, 2)}

@@ -35,17 +35,30 @@ export interface SkillCategory {
   icon: string;
 }
 
-export interface Testimonial {
+export interface Education {
+  id: string;
+  degree: string;
+  institution: string;
+  period: string;
+  description?: string;
+}
+
+export interface Certification {
   id: string;
   name: string;
-  role: string;
-  company: string;
-  text: string;
-  avatar?: string;
+  issuer: string;
+  year: string;
+  url?: string;
+}
+
+export interface Language {
+  language: string;
+  proficiency: string;
 }
 
 export interface ResumeData {
   name: string;
+  avatar?: string;
   title: string;
   tagline: string;
   about: string;
@@ -53,8 +66,10 @@ export interface ResumeData {
   services: Service[];
   skills: SkillCategory[];
   experience: Experience[];
+  education: Education[];
+  certifications: Certification[];
+  languages: Language[];
   projects: Project[];
-  testimonials: Testimonial[];
   contact: {
     email: string;
     phone?: string;

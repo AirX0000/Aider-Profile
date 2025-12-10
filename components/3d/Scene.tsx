@@ -4,7 +4,27 @@ import { Float, Text, Environment, Grid, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 
 // Fix for missing JSX intrinsic elements in TypeScript
-// Explicitly defining the elements used in this file to satisfy TypeScript
+// Augmenting both 'react' module (for React 18+ types) and global JSX
+declare module 'react' {
+  namespace JSX {
+    interface IntrinsicElements {
+      group: any;
+      instancedMesh: any;
+      octahedronGeometry: any;
+      meshStandardMaterial: any;
+      points: any;
+      bufferGeometry: any;
+      bufferAttribute: any;
+      pointsMaterial: any;
+      color: any;
+      fog: any;
+      ambientLight: any;
+      pointLight: any;
+      [elemName: string]: any;
+    }
+  }
+}
+
 declare global {
   namespace JSX {
     interface IntrinsicElements {
