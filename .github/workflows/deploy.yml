@@ -33,11 +33,10 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # если билд создаёт не dist, а build — поменяй path на ./build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./dist   # если Vite кладёт билд в dist
 
   deploy:
     needs: build
