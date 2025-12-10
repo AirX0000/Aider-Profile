@@ -27,16 +27,13 @@ jobs:
         with:
           node-version: 20
 
-      # Если у тебя есть package-lock.json – оставляй npm ci
-      # Если нет – поменяй на "npm install"
       - name: Install dependencies
         run: npm install
 
       - name: Build project
         run: npm run build
 
-      # ВНИМАНИЕ: если сборка создаёт папку не dist, а build,
-      # измени path: ./dist на path: ./build
+      # если билд создаёт не dist, а build — поменяй path на ./build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -52,4 +49,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v3
