@@ -1,0 +1,5 @@
+{
+  "name": "Lumina 3D Portfolio",
+  "description": "An immersive, 3D interactive resume portfolio featuring a responsive React Three Fiber background, glassmorphism UI, and a Gemini-powered AI assistant that answers questions about the candidate's experience.",
+  "requestFramePermissions": []
+}
